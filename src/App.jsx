@@ -10,28 +10,29 @@ import {
   SkeletonTransactionList, SkeletonCategoryList,
 } from './components/Skeleton';
 
+
 // ─── Initial data ──────────────────────────────────────────────
 const SEED = [
-  { id: 1,  title: 'Monthly Salary',     amount: 55000, type: 'income',  category: 'Salary',        date: '2024-06-01', icon: '💼', note: '' },
-  { id: 2,  title: 'Freelance Project',  amount: 27000, type: 'income',  category: 'Freelance',     date: '2024-06-05', icon: '💻', note: '' },
-  { id: 3,  title: 'Apartment Rent',     amount: 12000, type: 'expense', category: 'Housing',       date: '2024-06-01', icon: '🏠', note: '' },
-  { id: 4,  title: 'Grocery Shopping',   amount: 3800,  type: 'expense', category: 'Food',          date: '2024-06-08', icon: '🛒', note: '' },
-  { id: 5,  title: 'Netflix',            amount: 649,   type: 'expense', category: 'Entertainment', date: '2024-06-10', icon: '🎬', note: '' },
-  { id: 6,  title: 'Gym Membership',     amount: 1200,  type: 'expense', category: 'Health',        date: '2024-06-01', icon: '🏋️', note: '' },
-  { id: 7,  title: 'Restaurant Dinner',  amount: 1450,  type: 'expense', category: 'Dining',        date: '2024-06-12', icon: '🍔', note: '' },
-  { id: 8,  title: 'Uber Rides',         amount: 870,   type: 'expense', category: 'Transport',     date: '2024-06-15', icon: '🚗', note: '' },
-  { id: 9,  title: 'Amazon Shopping',    amount: 2340,  type: 'expense', category: 'Shopping',      date: '2024-06-14', icon: '🛍️', note: '' },
-  { id: 10, title: 'Electricity Bill',   amount: 950,   type: 'expense', category: 'Utilities',     date: '2024-06-07', icon: '⚡', note: '' },
-  { id: 11, title: 'Spotify',            amount: 119,   type: 'expense', category: 'Entertainment', date: '2024-06-10', icon: '🎵', note: '' },
-  { id: 12, title: 'Pharmacy',           amount: 580,   type: 'expense', category: 'Health',        date: '2024-06-11', icon: '💊', note: '' },
-  { id: 13, title: 'Weekend Getaway',    amount: 8500,  type: 'expense', category: 'Travel',        date: '2024-06-09', icon: '✈️', note: '' },
-  { id: 14, title: 'Coffee Shop',        amount: 430,   type: 'expense', category: 'Dining',        date: '2024-06-16', icon: '☕', note: '' },
-  { id: 15, title: 'Internet Bill',      amount: 699,   type: 'expense', category: 'Utilities',     date: '2024-06-07', icon: '📡', note: '' },
-  { id: 16, title: 'May Salary',         amount: 55000, type: 'income',  category: 'Salary',        date: '2024-05-01', icon: '💼', note: '' },
-  { id: 17, title: 'May Rent',           amount: 12000, type: 'expense', category: 'Housing',       date: '2024-05-01', icon: '🏠', note: '' },
-  { id: 18, title: 'May Groceries',      amount: 3500,  type: 'expense', category: 'Food',          date: '2024-05-08', icon: '🛒', note: '' },
-  { id: 19, title: 'May Dining',         amount: 2100,  type: 'expense', category: 'Dining',        date: '2024-05-15', icon: '🍔', note: '' },
-  { id: 20, title: 'Client Payment',     amount: 18000, type: 'income',  category: 'Freelance',     date: '2024-05-20', icon: '💻', note: '' },
+  { id: 1,  title: 'Monthly Salary',     amount: 55000, type: 'income',  category: 'Salary',        date: '2026-06-01', icon: '💼', note: '' },
+  { id: 2,  title: 'Freelance Project',  amount: 27000, type: 'income',  category: 'Freelance',     date: '2026-06-05', icon: '💻', note: '' },
+  { id: 3,  title: 'Apartment Rent',     amount: 12000, type: 'expense', category: 'Housing',       date: '2026-06-01', icon: '🏠', note: '' },
+  { id: 4,  title: 'Grocery Shopping',   amount: 3800,  type: 'expense', category: 'Food',          date: '2026-06-08', icon: '🛒', note: '' },
+  { id: 5,  title: 'Netflix',            amount: 649,   type: 'expense', category: 'Entertainment', date: '2026-06-10', icon: '🎬', note: '' },
+  { id: 6,  title: 'Gym Membership',     amount: 1200,  type: 'expense', category: 'Health',        date: '2026-06-01', icon: '🏋️', note: '' },
+  { id: 7,  title: 'Restaurant Dinner',  amount: 1450,  type: 'expense', category: 'Dining',        date: '2026-06-12', icon: '🍔', note: '' },
+  { id: 8,  title: 'Uber Rides',         amount: 870,   type: 'expense', category: 'Transport',     date: '2026-06-15', icon: '🚗', note: '' },
+  { id: 9,  title: 'Amazon Shopping',    amount: 2340,  type: 'expense', category: 'Shopping',      date: '2026-06-14', icon: '🛍️', note: '' },
+  { id: 10, title: 'Electricity Bill',   amount: 950,   type: 'expense', category: 'Utilities',     date: '2026-06-07', icon: '⚡', note: '' },
+  { id: 11, title: 'Spotify',            amount: 119,   type: 'expense', category: 'Entertainment', date: '2026-06-10', icon: '🎵', note: '' },
+  { id: 12, title: 'Pharmacy',           amount: 580,   type: 'expense', category: 'Health',        date: '2026-06-11', icon: '💊', note: '' },
+  { id: 13, title: 'Weekend Getaway',    amount: 8500,  type: 'expense', category: 'Travel',        date: '2026-06-09', icon: '✈️', note: '' },
+  { id: 14, title: 'Coffee Shop',        amount: 430,   type: 'expense', category: 'Dining',        date: '2026-06-16', icon: '☕', note: '' },
+  { id: 15, title: 'Internet Bill',      amount: 699,   type: 'expense', category: 'Utilities',     date: '2026-06-07', icon: '📡', note: '' },
+  { id: 16, title: 'May Salary',         amount: 55000, type: 'income',  category: 'Salary',        date: '2026-05-01', icon: '💼', note: '' },
+  { id: 17, title: 'May Rent',           amount: 12000, type: 'expense', category: 'Housing',       date: '2026-05-01', icon: '🏠', note: '' },
+  { id: 18, title: 'May Groceries',      amount: 3500,  type: 'expense', category: 'Food',          date: '2026-05-08', icon: '🛒', note: '' },
+  { id: 19, title: 'May Dining',         amount: 2100,  type: 'expense', category: 'Dining',        date: '2026-05-15', icon: '🍔', note: '' },
+  { id: 20, title: 'Client Payment',     amount: 18000, type: 'income',  category: 'Freelance',     date: '2026-05-20', icon: '💻', note: '' },
 ];
 
 function getFromStorage() {
@@ -118,7 +119,7 @@ export default function App() {
         <div className="page-header fade-up">
           <div>
             <h1>{getGreeting()}, Suman! 👋</h1>
-            <p>Here's your financial overview for June 2024</p>
+            <p>Here's your financial overview for June 2026</p>
           </div>
           <div className="header-actions">
             <div style={{
@@ -130,7 +131,7 @@ export default function App() {
               border: '1.5px solid var(--border)',
               display: 'flex', alignItems: 'center', gap: 8,
             }}>
-              📅 June 2024
+              📅 June 2026
             </div>
             <button
               className="btn btn-primary"
